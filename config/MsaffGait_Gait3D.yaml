@@ -1,0 +1,79 @@
+data_cfg:
+  dataset_name: Gait3D-Multimodal
+  dataset_partition: ./misc/partitions/Gait3D.json
+  dataset_root:
+    silhouette_root: Gait3D-sils-path
+    smpl_root: Gait3D-ske-path
+  num_workers: 20
+  remove_no_gallery: false
+  test_dataset_name: Gait3D-64pixel
+  
+evaluator_cfg:
+  enable_float16: false
+  eval_func: evaluation_Gait3D
+  metric: euc
+  restore_ckpt_strict: true
+  restore_hint: 80000
+  sampler:
+    batch_shuffle: false
+    batch_size: 1
+    frames_all_limit: 720
+    plus_smpl: true
+    sample_type: all_ordered
+  save_name: MsaffGait6L
+  transform:
+  - type: BaseSilTransform
+
+loss_cfg:
+- log_prefix: triplet
+  loss_term_weight: 1.0
+  margin: 0.2
+  type: TripletLoss
+  work_iteration: 0
+
+model_cfg:
+  class_num: 3000
+  hidden_dim: 256
+  k : 3
+  set_in_channels_img : 1
+  set_in_channels_ske : 3
+  set_channels : [32, 64, 128]
+  model: MsaffGait6L
+  part_img: 16
+  part_ske: 17
+
+
+optimizer_cfg:
+  lr: 0.0001
+  momentum: 0.9
+  solver: Adam
+  weight_decay: 0
+scheduler_cfg:
+  gamma: 0.1
+  milestones:
+  - 40000
+  - 80000
+  scheduler: MultiStepLR
+
+trainer_cfg:
+  enable_float16: true
+  fix_BN: false
+  log_iter: 100
+  restore_ckpt_strict: true
+  restore_hint: 0
+  sampler:
+    batch_shuffle: true
+    batch_size:
+    - 32
+    - 4
+    frames_num_fixed: 60
+    frames_skip_num: 0
+    plus_smpl: true
+    sample_type: fixed_unordered
+    type: TripletSampler
+  save_iter: 10000
+  save_name: MsaffGait6L
+  sync_BN: true
+  total_iter: 100000
+  transform:
+  - type: BaseSilTransform
