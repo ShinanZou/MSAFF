@@ -1,5 +1,6 @@
 # MSAFF
 A Multi-Stage Adaptive Feature Fusion Neural Network for Multimodal Gait Recognition
+
 The article has been accepted by IJCB2023
 ## Requirements
 
