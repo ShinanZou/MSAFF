@@ -2,7 +2,7 @@
 A Multi-Stage Adaptive Feature Fusion Neural Network for Multimodal Gait Recognition
 
 The article has been accepted by IJCB2023
-- **IJCB 2023 Version**: [Download paper (AAAI)]()
+- **IJCB 2023 Version**: [Download paper (IJCB2023)]()
 - **ArXiv Preprint**: [Download preprint (ArXiv)](https://arxiv.org/abs/XXXX.XXXXX)
 ## Requirements
 
@@ -78,7 +78,11 @@ CUDA_VISIBLE_DEVICES=0 python -m torch.distributed.launch --nproc_per_node=1 lib
 Please cite this paper in your publications if it helps your research:
 
 ```BibTeX
-
+@INPROCEEDINGS{ShinanZouMSAFF
+  author={Zou, Shinan and Xiong, Jianbo and Fan, Chao and Yu, Shiqi and Tang, Jin},
+  booktitle={2023 IEEE International Joint Conference on Biometrics (IJCB)}, 
+  title={A Multi-Stage Adaptive Feature Fusion Neural Network for Multimodal Gait Recognition}, 
+  year={2023}}
 ```
 ## Acknowledgement
 
