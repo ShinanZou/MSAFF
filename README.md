@@ -3,7 +3,7 @@ A Multi-Stage Adaptive Feature Fusion Neural Network for Multimodal Gait Recogni
 
 The article has been accepted by IJCB2023 (oral).
 - **IJCB 2023 Version**: [Download paper (IJCB2023)]()
-- **ArXiv Preprint**: [Download preprint (ArXiv)](https://arxiv.org/abs/XXXX.XXXXX)
+- **ArXiv Preprint**: [Download preprint (ArXiv)](https://arxiv.org/pdf/2312.14410.pdf)
 ## Requirements
 
 - pytorch >= 1.6
