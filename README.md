@@ -6,9 +6,9 @@ The article has been accepted by IJCB2023 (oral).
 - **ArXiv Preprint**: [Download preprint (ArXiv)](https://arxiv.org/pdf/2312.14410.pdf)
 ## Updates
 Following the code open-sourcing, I’m grateful for the unexpected attention this early-stage work has received. Thank you all for your support. Addressing some reproduction issues raised by peers (likely due to dataset processing):
-- Datasets: Processed versions of CASIA-B and Gait-3D are available [here](https://pan.baidu.com/s/1M8UepY3vWV4b_rIWwMNBxA?pwd=fcbs) code(fcbs).
+- Datasets: Processed versions of CASIA-B and Gait-3D are available [here](https://pan.baidu.com/s/1M8UepY3vWV4b_rIWwMNBxA?pwd=fcbs) (Code:fcbs).
 - Gait-3D and GREW: Experiments on Gait-3D and GREW were modified from the early open-sourced OpenGait framework.
-- CASIA-B: Original experiments on CASIA-B were modified from the early open-sourced GaitSet framework. Code and weights for verification are now provided [here](https://pan.baidu.com/s/1M8UepY3vWV4b_rIWwMNBxA?pwd=fcbs) code(fcbs).
+- CASIA-B: Original experiments on CASIA-B were modified from the early open-sourced GaitSet framework. Code and weights for verification are now provided [here](https://pan.baidu.com/s/1M8UepY3vWV4b_rIWwMNBxA?pwd=fcbs) (Code:fcbs).
 - Training Stability: Both GaitSet and early OpenGait frameworks exhibit training instability in some algorithms (e.g., accuracy fluctuations of ±1-2% per training ), though the root cause remains unclear. To ensure optimal results, we trained each model ≥5 times and performed testing every 10 iterations during the final 20,000 iterations to select the best weights. This methodology produced the results reported in our paper.
 - Future Plans: We will adapt this code to the CCGR and CCGR-MINI datasets and enhance maintenance and support for the CCGR series. Welcome to utilize CCGR series (https://github.com/ShinanZou/CCGR).
 ## Requirements
